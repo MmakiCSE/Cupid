@@ -1,54 +1,1233 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#101010">
-	<title>Cupid — Good company, wherever you go</title>
-	<meta name="description" content="Find a verified, non-sexual social companion for events, dining, and exploring your city.">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-	<style>
-		:root{color-scheme:dark;--bg:#101010;--panel:#191817;--muted:#a9a4a0;--text:#f7f2ef;--accent:#ee8b78;--line:#ffffff16;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
-		*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#492b2b 0,transparent 36%),var(--bg);color:var(--text);font:15px var(--sans)}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font:600 27px var(--serif);letter-spacing:.3px}.brand b{color:var(--accent);font-weight:600}.navlinks{display:flex;align-items:center;gap:26px;color:#d4ceca;font-size:13px}.navlinks a:hover{color:var(--accent)}.pill{border:1px solid #ffffff36;border-radius:999px;padding:10px 16px}.hero{padding:84px 0 52px;display:grid;grid-template-columns:1.04fr .96fr;gap:42px;align-items:center}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700}.hero h1{font:500 clamp(44px,6vw,72px)/1.07 var(--serif);letter-spacing:-1.5px;margin:17px 0}.hero h1 em{color:var(--accent);font-weight:500}.lead{color:#c1bbb6;line-height:1.8;max-width:510px}.hero-image{height:410px;border-radius:18px;background:linear-gradient(180deg,transparent 50%,#100e0de0),url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative;border:1px solid var(--line);box-shadow:0 24px 80px #0008}.image-note{position:absolute;bottom:22px;left:22px}.image-note strong{display:block;font:22px var(--serif)}.image-note span{color:#ddd;font-size:12px}.search{margin-top:30px;background:#1b1918;border:1px solid #ffffff20;border-radius:14px;padding:12px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:8px;box-shadow:0 16px 50px #0004}.field{padding:5px 10px;border-right:1px solid var(--line)}.field label{display:block;color:#a9a4a0;font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}.field input,.field select{background:transparent;color:var(--text);border:0;outline:0;width:100%;font-size:13px}.field select option{background:#191817}.btn{background:var(--accent);color:#201411;border:0;border-radius:9px;padding:13px 20px;font-weight:700;transition:.2s}.btn:hover{background:#ffa08e;transform:translateY(-1px);box-shadow:0 6px 22px #ee8b7840}.trust{display:flex;gap:18px;margin-top:18px;color:#c7c0bb;font-size:11px}.trust span:before{content:'✓';color:var(--accent);margin-right:6px}.section{padding:48px 0 70px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:23px}.section h2{font:500 34px var(--serif);margin:8px 0 0}.sub{color:var(--muted);font-size:13px}.filters{display:flex;gap:8px;margin-bottom:19px;flex-wrap:wrap}.filter{color:#ddd;background:#1a1918;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:11px}.filter.active,.filter:hover{border-color:var(--accent);color:var(--accent)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-4px);border-color:#ee8b7866}.photo{height:240px;background-size:cover;background-position:center;position:relative}.verified{position:absolute;top:13px;left:13px;background:#141211d9;border:1px solid #ffffff25;border-radius:99px;padding:7px 10px;font-size:10px}.verified:before{content:'✓';color:#9ed6ae;margin-right:5px}.rate{position:absolute;right:13px;bottom:13px;background:#141211e8;border-radius:7px;padding:7px 9px;font-size:11px}.card-body{padding:17px}.card-title{display:flex;justify-content:space-between;align-items:center}.card h3{margin:0;font:22px var(--serif)}.rating{font-size:12px;color:#f5c27a}.card p{margin:10px 0 14px;color:#bbb3ae;font-size:12px;line-height:1.6}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:10px;color:#d2c8c2;background:#ffffff0b;border:1px solid var(--line);border-radius:99px;padding:6px 9px}.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:17px}.card-foot small{color:var(--muted)}.text-btn{color:var(--accent);background:none;border:0;font-size:12px;font-weight:700}.notice{margin:5px 0 64px;padding:24px 27px;border:1px solid #ee8b7833;background:linear-gradient(100deg,#ee8b7810,#ffffff05);border-radius:13px;display:flex;gap:18px;align-items:center}.notice-icon{font-size:24px;color:var(--accent)}.notice strong{font:19px var(--serif)}.notice p{margin:5px 0 0;color:#b8b0aa;font-size:12px;line-height:1.6}.footer{border-top:1px solid var(--line);padding:26px 0 38px;display:flex;justify-content:space-between;color:#98918d;font-size:11px}.footer-links{display:flex;gap:20px}.footer a:hover{color:var(--accent)}.modal-backdrop{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:20px;z-index:5}.modal-backdrop.open{display:grid}.modal{width:min(450px,100%);background:#1b1918;border:1px solid #ffffff24;border-radius:16px;padding:27px;box-shadow:0 30px 90px #0009}.modal h2{font:26px var(--serif);margin:0 0 10px}.modal p{color:#bdb5af;font-size:13px;line-height:1.65}.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:22px}.secondary{background:transparent;color:#eee;border:1px solid #ffffff35;border-radius:9px;padding:12px 15px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#24211f;border:1px solid #ffffff2a;border-radius:10px;padding:12px 17px;font-size:13px;transition:.25s;z-index:8}.toast.show{transform:translate(-50%,0);opacity:1}.empty{grid-column:1/-1;color:var(--muted);padding:35px;text-align:center;border:1px dashed var(--line);border-radius:12px}
-		@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:55px;gap:26px}.hero-image{height:320px;grid-row:1}.search{grid-template-columns:1fr 1fr}.field:nth-child(2){border:0}.cards{grid-template-columns:repeat(2,1fr)}.navlinks{gap:13px}.navlinks a:not(.pill){display:none}}
-		@media(max-width:540px){.wrap{width:min(100% - 28px,1160px)}.hero{padding-top:35px}.hero-image{height:260px}.hero h1{font-size:48px}.search{grid-template-columns:1fr}.field{border:0;border-bottom:1px solid var(--line);padding:8px}.search .btn{width:100%}.trust{gap:10px;flex-wrap:wrap}.cards{grid-template-columns:1fr}.photo{height:260px}.section h2{font-size:29px}.section-head{align-items:start;gap:10px;flex-direction:column}.notice{align-items:flex-start;padding:18px}.footer{gap:18px;flex-direction:column}.footer-links{flex-wrap:wrap}}
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0c0c">
+<meta name="robots" content="noindex,nofollow">
+<title>Cupid — Verified adult connections, on your terms</title>
+<meta name="description" content="A private, verified adult connections club. Discreet introductions, mutual discretion agreements, and privacy by default.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0d0c0c; --bg-2:#131110; --panel:#181615; --panel-2:#1f1c1a; --panel-3:#252120;
+  --text:#f7f2ef; --muted:#a49d98; --muted-2:#7d7672;
+  --accent:#e98a76; --accent-2:#ffa593; --gold:#e3c07b; --green:#9ed6ae; --platinum:#c9d6e2; --bronze:#c0916b;
+  --line:#ffffff14; --line-2:#ffffff24;
+  --serif:'Playfair Display',Georgia,serif; --sans:'DM Sans',Arial,sans-serif;
+  --r:14px; --shadow:0 24px 70px #000000a0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--text); font:15px/1.55 var(--sans); background:var(--bg);
+  background-image:
+    radial-gradient(ellipse 900px 520px at 82% -8%, #4a2a26 0%, transparent 60%),
+    radial-gradient(ellipse 700px 500px at 4% 12%, #241f2c 0%, transparent 58%);
+  background-repeat:no-repeat; background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.eyebrow{color:var(--accent);font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;font-weight:700}
+.sub{color:var(--muted);font-size:13px}
+.hidden{display:none !important}
+
+/* ---------- Age gate ---------- */
+.gate{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:22px;
+  background:radial-gradient(ellipse at 50% 0%,#3a221f 0,#0b0a0a 68%);}
+.gate[hidden]{display:none}
+.gate-card{width:min(500px,100%);background:linear-gradient(170deg,#1c1917,#141211);
+  border:1px solid var(--line-2);border-radius:20px;padding:36px 32px;box-shadow:var(--shadow);text-align:center}
+.gate-mark{font:600 34px var(--serif);letter-spacing:.4px}
+.gate-mark b{color:var(--accent);font-weight:600}
+.gate h1{font:500 27px/1.2 var(--serif);margin:14px 0 8px}
+.gate p{color:var(--muted);font-size:13px;line-height:1.7;margin:0 auto;max-width:390px}
+.gate form{margin-top:24px;display:grid;gap:10px;text-align:left}
+.gate label{font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.gate input{width:100%;background:#0f0d0d;border:1px solid var(--line-2);border-radius:10px;padding:12px 13px}
+.gate .err{color:#ff9b8a;font-size:12px;margin:2px 0 0}
+.gate .fine{color:var(--muted-2);font-size:11px;margin-top:14px;line-height:1.6}
+
+/* ---------- Consent bar ---------- */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:55;padding:14px;
+  background:#161413f2;backdrop-filter:blur(14px);border-top:1px solid var(--line-2);
+  transform:translateY(110%);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.consent.show{transform:none}
+.consent-in{width:min(1180px,100%);margin:auto;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.consent-in p{margin:0;font-size:12.5px;color:#c6bfba;flex:1 1 320px;line-height:1.65}
+.consent-in strong{color:var(--text);font-weight:600}
+.consent-opts{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.consent-opts label{display:flex;gap:7px;align-items:center;font-size:12px;color:var(--muted)}
+.consent-actions{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ---------- Buttons ---------- */
+.btn{background:var(--accent);color:#22120e;border:0;border-radius:10px;padding:13px 20px;
+  font-weight:700;font-size:13.5px;transition:transform .18s,box-shadow .18s,background .18s}
+.btn:hover{background:var(--accent-2);transform:translateY(-1px);box-shadow:0 10px 26px #e98a7640}
+.btn:active{transform:none}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line-2)}
+.btn.ghost:hover{background:#ffffff0d;box-shadow:none;border-color:#ffffff40}
+.btn.small{padding:9px 14px;font-size:12px}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.icon-btn{background:transparent;border:1px solid var(--line-2);color:var(--muted);border-radius:9px;
+  width:34px;height:34px;display:grid;place-items:center;font-size:13px;transition:.2s}
+.icon-btn:hover{color:var(--text);border-color:#ffffff45}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:40;background:#0d0c0ce8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font:600 26px var(--serif);letter-spacing:.3px}
+.brand b{color:var(--accent);font-weight:600}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:13px;color:#cec8c4}
+.navlinks a:hover{color:var(--accent)}
+.pill{border:1px solid #ffffff36;border-radius:999px;padding:10px 16px;transition:.2s}
+.pill:hover{border-color:var(--accent);color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.count{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:99px;
+  background:var(--accent);color:#22120e;font-size:10.5px;font-weight:700;margin-left:6px}
+
+/* ---------- Hero ---------- */
+.hero{padding:80px 0 44px;display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}
+.hero h1{font:500 clamp(42px,5.6vw,68px)/1.05 var(--serif);letter-spacing:-1.6px;margin:16px 0 18px}
+.hero h1 em{color:var(--accent);font-style:normal}
+.lead{color:#c3bcb7;line-height:1.8;max-width:520px;font-size:15px}
+.hero-media{position:relative;height:430px;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.hero-media .img{position:absolute;inset:0;background:center/cover no-repeat;
+  background-image:linear-gradient(180deg,#0000 40%,#0b0a0add),url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=85');
+  animation:slowzoom 22s ease-in-out infinite alternate}
+@keyframes slowzoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero-media .caption{position:absolute;left:24px;bottom:22px;right:24px}
+.hero-media .caption strong{display:block;font:22px/1.25 var(--serif)}
+.hero-media .caption span{color:#ded8d4;font-size:12px}
+.hero-tag{position:absolute;top:16px;left:16px;background:#0d0c0cd9;border:1px solid var(--line-2);
+  border-radius:99px;padding:7px 12px;font-size:10.5px;letter-spacing:.6px}
+.hero-tag:before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:7px;vertical-align:middle}
+.search{margin-top:28px;background:#171514;border:1px solid #ffffff22;border-radius:15px;padding:11px;
+  display:grid;grid-template-columns:1.1fr 1fr 1fr auto;gap:6px;box-shadow:0 18px 50px #00000055}
+.field{padding:6px 12px;border-right:1px solid var(--line);min-width:0}
+.field:last-of-type{border-right:0}
+.field label{display:block;color:var(--muted);font-size:9.5px;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:5px}
+.field input,.field select{background:transparent;border:0;outline:0;width:100%;font-size:13px;color:var(--text)}
+.field select option{background:#191716}
+.trust{display:flex;gap:18px;margin-top:16px;color:#c2bbb6;font-size:11.5px;flex-wrap:wrap}
+.trust span:before{content:'✓';color:var(--accent);margin-right:6px;font-weight:700}
+
+/* ---------- Sections ---------- */
+.section{padding:52px 0 76px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.section h2{font:500 33px/1.15 var(--serif);margin:8px 0 0;letter-spacing:-.5px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+.chip{color:#ddd5d0;background:#171514;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:11.5px;transition:.18s}
+.chip:hover{border-color:#ffffff40;color:#fff}
+.chip.active{border-color:var(--accent);color:var(--accent);background:#e98a7612}
+.spacer{flex:1}
+select.sort{background:#171514;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:11.5px}
+
+/* ---------- Cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(180deg,var(--panel),#151313);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;transition:transform .28s,border-color .28s,box-shadow .28s;position:relative}
+.card:hover{transform:translateY(-5px);border-color:#e98a7655;box-shadow:0 22px 50px #00000070}
+.photo{position:relative;height:250px;overflow:hidden}
+.photo .img{position:absolute;inset:0;background:center/cover no-repeat;transition:transform .5s,filter .35s}
+.card:hover .photo .img{transform:scale(1.05)}
+.photo.locked .img{filter:blur(17px) saturate(.85);transform:scale(1.14)}
+.photo .scrim{position:absolute;inset:0;background:linear-gradient(180deg,#00000000 45%,#0a0908d9)}
+.badge{position:absolute;background:#0d0c0cd6;border:1px solid #ffffff26;border-radius:99px;
+  padding:6px 10px;font-size:10px;letter-spacing:.3px;backdrop-filter:blur(6px)}
+.b-verif{top:12px;left:12px}
+.b-verif:before{content:'✓';color:var(--green);margin-right:5px;font-weight:700}
+.b-price{top:12px;right:12px;color:var(--gold)}
+.b-tier{bottom:12px;left:12px;display:flex;align-items:center;gap:6px;font-weight:600}
+.tier-dot{width:7px;height:7px;border-radius:50%}
+.reveal-btn{position:absolute;bottom:12px;right:12px;background:#0d0c0ce0;border:1px solid #ffffff2e;
+  border-radius:99px;padding:7px 11px;font-size:10.5px;color:#e6e0dc}
+.reveal-btn:hover{border-color:var(--accent);color:var(--accent)}
+.card-body{padding:16px 17px 17px}
+.card-title{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card h3{margin:0;font:21px var(--serif)}
+.rating{font-size:12px;color:var(--gold);white-space:nowrap}
+.rating i{color:var(--muted-2);font-style:normal}
+.card p{margin:9px 0 13px;color:#b6aeaa;font-size:12.5px;line-height:1.6}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:10px;color:#d3cac4;background:#ffffff0a;border:1px solid var(--line);border-radius:99px;padding:5px 9px}
+.tag.hot{border-color:#e98a7640;color:var(--accent)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:15px;gap:10px}
+.card-foot small{color:var(--muted-2);font-size:10.5px}
+.text-btn{color:var(--accent);background:none;border:0;font-size:12px;font-weight:700}
+.text-btn:hover{color:var(--accent-2)}
+.empty{grid-column:1/-1;color:var(--muted);padding:44px;text-align:center;border:1px dashed var(--line-2);border-radius:var(--r)}
+
+/* ---------- How / plans ---------- */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.step-card .n{font:600 12px var(--sans);color:var(--accent);letter-spacing:1.4px}
+.step-card h4{font:19px var(--serif);margin:10px 0 7px;font-weight:500}
+.step-card p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.65}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:12px;transition:.25s}
+.plan:hover{border-color:#ffffff33;transform:translateY(-3px)}
+.plan.featured{border-color:#e98a7655;background:linear-gradient(180deg,#241a18,#171514)}
+.plan h4{font:22px var(--serif);margin:0;font-weight:500}
+.plan .price{font:500 34px var(--serif);color:var(--text)}
+.plan .price small{font:400 12px var(--sans);color:var(--muted);letter-spacing:.4px}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:12.5px;color:#c2bbb6}
+.plan li:before{content:'✓';color:var(--accent);margin-right:8px;font-weight:700}
+.plan .btn{margin-top:auto;justify-content:center;text-align:center}
+
+/* ---------- Standards notice ---------- */
+.notice{margin:6px 0 64px;padding:24px 27px;border:1px solid #e98a7633;border-radius:var(--r);
+  background:linear-gradient(100deg,#e98a7610,#ffffff05);display:flex;gap:18px;align-items:flex-start}
+.notice-icon{font-size:22px;color:var(--accent);line-height:1}
+.notice strong{font:19px/1.3 var(--serif);display:block}
+.notice p{margin:6px 0 0;color:#b6aeaa;font-size:12.5px;line-height:1.7;max-width:900px}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid var(--line);padding:28px 0 46px}
+.footer-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#938b86;font-size:11.5px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer a:hover{color:var(--accent)}
+
+/* ---------- Modals ---------- */
+.modal-backdrop{position:fixed;inset:0;background:#000000cc;backdrop-filter:blur(4px);
+  display:none;place-items:center;padding:20px;z-index:50;overflow:auto}
+.modal-backdrop.open{display:grid}
+.modal{width:min(500px,100%);max-height:calc(100vh - 40px);overflow:auto;background:#1a1817;
+  border:1px solid var(--line-2);border-radius:18px;padding:26px;box-shadow:var(--shadow);
+  animation:pop .22s ease-out}
+.modal.wide{width:min(620px,100%)}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.modal-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:16px}
+.modal h2{font:500 25px/1.2 var(--serif);margin:6px 0 4px}
+.modal p{color:#b9b1ab;font-size:13px;line-height:1.7}
+.modal-foot{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.steps{display:flex;gap:6px;margin:16px 0 20px}
+.steps span{flex:1;height:3px;border-radius:99px;background:#ffffff1a;transition:.3s}
+.steps span.on{background:var(--accent)}
+.form-row{display:grid;gap:7px;margin-bottom:14px}
+.form-row label{font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.form-row input,.form-row select,.form-row textarea{background:#100e0e;border:1px solid var(--line-2);
+  border-radius:10px;padding:11px 12px;font-size:13.5px;width:100%}
+.form-row.two{grid-template-columns:1fr 1fr;display:grid;gap:10px}
+.form-row.two>div{display:grid;gap:7px}
+.opt-group{display:grid;gap:8px;margin-bottom:14px}
+.opt{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#100e0e;
+  border:1px solid var(--line-2);border-radius:11px;padding:11px 13px;cursor:pointer;transition:.18s;font-size:13px}
+.opt:hover{border-color:#ffffff3a}
+.opt.sel{border-color:var(--accent);background:#e98a7614}
+.opt .o-price{color:var(--gold);font-size:12.5px;white-space:nowrap}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:#c1b9b4;
+  line-height:1.6;margin-bottom:12px;cursor:pointer}
+.check input{margin-top:2px;accent-color:var(--accent);width:15px;height:15px;flex:none}
+.summary{background:#100e0e;border:1px solid var(--line);border-radius:11px;padding:14px;font-size:13px;margin-bottom:16px}
+.summary div{display:flex;justify-content:space-between;gap:10px;padding:5px 0;color:#c2bbb6}
+.summary div.total{border-top:1px solid var(--line);margin-top:6px;padding-top:10px;color:var(--text);font-weight:700}
+.summary .small{font-size:11.5px;color:var(--muted-2)}
+.err-line{color:#ff9b8a;font-size:12px;margin:-6px 0 12px}
+
+/* profile modal */
+.pm-top{display:flex;gap:16px;margin-bottom:18px}
+.pm-photo{width:132px;height:132px;border-radius:12px;background:center/cover no-repeat;flex:none;border:1px solid var(--line)}
+.bars{display:grid;gap:9px;margin:14px 0 18px}
+.bar-row{display:grid;grid-template-columns:118px 1fr 44px;gap:10px;align-items:center;font-size:11.5px;color:#b9b1ab}
+.bar{height:5px;border-radius:99px;background:#ffffff14;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:99px}
+.bar-row b{text-align:right;color:var(--text);font-weight:600}
+
+/* ---------- Dashboard drawer ---------- */
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:#141211;z-index:52;
+  border-left:1px solid var(--line-2);box-shadow:-30px 0 80px #000000a0;transform:translateX(102%);
+  transition:transform .38s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.drawer-head h3{margin:0;font:22px var(--serif);font-weight:500}
+.drawer-body{padding:18px 22px 30px;overflow:auto;display:grid;gap:14px}
+.booking{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px}
+.booking h4{margin:0 0 3px;font:17px var(--serif);font-weight:500}
+.booking .meta{color:var(--muted);font-size:11.5px}
+.timeline{display:flex;gap:5px;margin:13px 0 11px}
+.timeline span{flex:1;height:4px;border-radius:99px;background:#ffffff14}
+.timeline span.done{background:var(--accent)}
+.timeline-labels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--muted-2);text-transform:uppercase;letter-spacing:.6px}
+.booking .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.booking .status{display:inline-block;font-size:10.5px;padding:4px 9px;border-radius:99px;
+  background:#e98a7618;color:var(--accent);border:1px solid #e98a7640}
+.stars{display:flex;gap:4px;margin-top:10px}
+.stars button{background:none;border:0;color:#4a4441;font-size:18px;line-height:1;padding:0;transition:.15s}
+.stars button.on,.stars button:hover{color:var(--gold)}
+
+/* ---------- Toast ---------- */
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,24px);opacity:0;pointer-events:none;
+  background:#262220;border:1px solid var(--line-2);border-radius:11px;padding:12px 18px;font-size:13px;
+  box-shadow:0 18px 50px #000a;transition:.28s;z-index:70;max-width:calc(100% - 32px);text-align:center}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:52px}
+  .hero-media{height:340px;order:-1}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:1fr}
+  .navlinks a:not(.pill){display:none}
+}
+@media(max-width:700px){
+  .wrap{width:calc(100% - 28px)}
+  .search{grid-template-columns:1fr 1fr}
+  .search .field:nth-child(2){border-right:0}
+  .btn#searchBtn,.search .btn{grid-column:1/-1;width:100%}
+  .hero h1{font-size:clamp(38px,10vw,50px)}
+  .cards{grid-template-columns:1fr}
+  .photo{height:280px}
+  .grid-4{grid-template-columns:1fr}
+  .section-head{align-items:flex-start;flex-direction:column}
+  .modal{padding:20px;border-radius:15px}
+  .pm-top{flex-direction:column}
+  .pm-photo{width:100%;height:170px}
+  .bar-row{grid-template-columns:92px 1fr 38px}
+  .footer-in{flex-direction:column}
+  .consent-in{flex-direction:column;align-items:stretch}
+  .search .field{border-right:0;border-bottom:1px solid var(--line)}
+  .search .field:last-of-type{border-bottom:0}
+}
+</style>
 </head>
 <body>
-	<header class="wrap nav"><a class="brand" href="#top">Cupid<b> ♥</b></a><nav class="navlinks" aria-label="Main navigation"><a href="#companions">Explore</a><a href="#how">How it works</a><a href="#rules">Community standards</a><a class="pill" href="#companions">Join Cupid</a></nav></header>
-	<main id="top" class="wrap">
-		<section class="hero" aria-labelledby="hero-title">
-			<div><div class="eyebrow">Thoughtful company, thoughtfully matched</div><h1 id="hero-title">Make the moment<br><em>more memorable.</em></h1><p class="lead">Meet verified social companions for a gallery opening, a great dinner, a new city, or simply good conversation. Real people. Clear expectations. A better way to go together.</p>
-				<form class="search" id="searchForm"><div class="field"><label for="city">City</label><input id="city" placeholder="Where are you going?" autocomplete="address-level2"></div><div class="field"><label for="date">Date</label><input id="date" type="date"></div><div class="field"><label for="occasion">Occasion</label><select id="occasion"><option value="">Any occasion</option><option>Dinner</option><option>Arts & culture</option><option>City exploring</option><option>Event companion</option></select></div><button class="btn" type="submit">Find company</button></form>
-				<div class="trust"><span>Identity checked</span><span>Reviews from real bookings</span><span>Respect-first community</span></div>
-			</div>
-			<div class="hero-image" role="img" aria-label="Friends enjoying an elegant evening event"><div class="image-note"><strong>Go together, feel at ease.</strong><span>Companionship for life's good moments.</span></div></div>
-		</section>
-		<section class="section" id="companions"><div class="section-head"><div><div class="eyebrow">A few good introductions</div><h2>Meet your kind of company</h2></div><span class="sub" id="resultCount">Verified community members</span></div>
-			<div class="filters" aria-label="Filter companions"><button class="filter active" data-filter="All">All companions</button><button class="filter" data-filter="Dinner">Dinner</button><button class="filter" data-filter="Arts & culture">Arts & culture</button><button class="filter" data-filter="City exploring">City exploring</button><button class="filter" data-filter="Event companion">Events</button></div>
-			<div class="cards" id="cards" aria-live="polite"></div>
-		</section>
-		<section class="notice" id="how"><div class="notice-icon" aria-hidden="true">♡</div><div><strong>Good company. Clear boundaries.</strong><p>Cupid is for non-sexual social companionship only. Bookings are for conversation and shared public activities; sexual services, solicitation, and any form of coercion are not allowed. Members must be 18 or older. Always agree on plans and costs in advance.</p></div></section>
-	</main>
-	<footer class="wrap footer" id="rules"><span>© 2025 Cupid · Built around respect and genuine connection.</span><div class="footer-links"><a href="#how">Community standards</a><a href="mailto:support@example.com">Safety & support</a><a href="#top">Privacy</a></div></footer>
-	<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="eyebrow">A good introduction</div><h2 id="modalTitle">Request a plan</h2><p id="modalText">Choose a companion to start planning a non-sexual social outing.</p><label class="field" style="display:block;border:1px solid #ffffff24;border-radius:9px;margin-top:18px"><span style="display:block;color:#aaa;font-size:10px;text-transform:uppercase;margin-bottom:6px">What would you like to do?</span><input id="plan" placeholder="Dinner, a museum, a concert…" style="background:transparent;color:white;border:0;outline:0;width:100%"></label><div class="modal-actions"><button class="secondary" id="closeModal">Cancel</button><button class="btn" id="sendRequest">Continue</button></div></div></div>
-	<div class="toast" id="toast" role="status" aria-live="polite"></div>
-	<script>
-		// Sample profiles are fictional. This single-file demo does not collect or transmit data.
-		const companions=[
-			{name:'Maya',city:'New York',rate:65,rating:'4.98',count:42,about:'Museum enthusiast, curious conversationalist, and always up for finding the best little café.',tags:['Arts & culture','Dinner','City exploring'],image:'photo-1534528741775-53994a69daeb'},
-			{name:'Oliver',city:'Chicago',rate:58,rating:'4.96',count:31,about:'Local architecture buff who knows the city’s stages, jazz rooms, and neighborhood favorites.',tags:['Dinner','Event companion','Arts & culture'],image:'photo-1500648767791-00dcc994a43e'},
-			{name:'Sofia',city:'Los Angeles',rate:72,rating:'5.00',count:27,about:'Warm, easygoing company for an opening night, a scenic walk, or your next food adventure.',tags:['City exploring','Event companion','Dinner'],image:'photo-1524504388940-b1c1722653e1'},
-			{name:'Ethan',city:'New York',rate:60,rating:'4.91',count:19,about:'Film, live music, and great conversation. Happy to plan an outing around what you enjoy.',tags:['Event companion','Arts & culture'],image:'photo-1506794778202-cad84cf45f1d'},
-			{name:'Amara',city:'Chicago',rate:68,rating:'4.97',count:36,about:'A relaxed, thoughtful companion for dinners, galleries, and discovering new places.',tags:['Dinner','City exploring'],image:'photo-1531123897727-8f129e1688ce'},
-			{name:'Leo',city:'Los Angeles',rate:55,rating:'4.94',count:23,about:'Friendly local guide for markets, bookstores, hikes, and the occasional red carpet.',tags:['City exploring','Event companion'],image:'photo-1507003211169-0a1dd7228f2d'}
-		];
-		const cards=document.querySelector('#cards');let activeFilter='All',activeCity='',activeOccasion='';
-		function render(){const shown=companions.filter(p=>(!activeCity||p.city.toLowerCase().includes(activeCity.toLowerCase()))&&(activeFilter==='All'||p.tags.includes(activeFilter))&&(!activeOccasion||p.tags.includes(activeOccasion)));document.querySelector('#resultCount').textContent=`${shown.length} verified ${shown.length===1?'companion':'companions'}`;cards.innerHTML=shown.length?shown.map((p,i)=>`<article class="card"><div class="photo" style="background-image:linear-gradient(180deg,transparent 52%,#0007),url('https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=800&q=80')"><span class="verified">Identity checked</span><span class="rate">From $${p.rate}/hour</span></div><div class="card-body"><div class="card-title"><h3>${p.name}</h3><span class="rating">★ ${p.rating} <span style="color:#aaa">(${p.count})</span></span></div><p>${p.city} · ${p.about}</p><div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div><div class="card-foot"><small>Public activities · Clear plans</small><button class="text-btn book" data-index="${companions.indexOf(p)}">View & plan →</button></div></div></article>`).join(''):'<div class="empty">No matches yet. Try another city or occasion.</div>';document.querySelectorAll('.book').forEach(b=>b.addEventListener('click',()=>openBooking(companions[+b.dataset.index])))}
-		document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeFilter=b.dataset.filter;render()}));
-		document.querySelector('#searchForm').addEventListener('submit',e=>{e.preventDefault();activeCity=document.querySelector('#city').value.trim();activeOccasion=document.querySelector('#occasion').value;render();document.querySelector('#companions').scrollIntoView({behavior:'smooth'})});
-		const modal=document.querySelector('#modal');function openBooking(p){document.querySelector('#modalTitle').textContent=`Plan an outing with ${p.name}`;document.querySelector('#modalText').textContent=`${p.city} · From $${p.rate}/hour. Share an idea for a non-sexual social activity; agree on details and cost before confirming.`;document.querySelector('#plan').value='';modal.classList.add('open');document.querySelector('#closeModal').focus()}function close(){modal.classList.remove('open')}document.querySelector('#closeModal').onclick=close;modal.addEventListener('click',e=>{if(e.target===modal)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.querySelector('#sendRequest').addEventListener('click',()=>{const plan=document.querySelector('#plan').value.trim();if(!plan){document.querySelector('#plan').focus();return}close();const toast=document.querySelector('#toast');toast.textContent='Demo only — no booking or personal data was sent.';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3200)});render();
-	</script>
+
+<!-- ================= AGE GATE ================= -->
+<div class="gate" id="ageGate" hidden>
+  <div class="gate-card">
+    <div class="gate-mark">Cupid<b> ♥</b></div>
+    <h1>Adults only</h1>
+    <p>Cupid is a members-only club for verified adults arranging their own private company. Enter your date of birth to continue.</p>
+    <form id="gateForm" novalidate>
+      <div>
+        <label for="dob">Date of birth</label>
+        <input id="dob" type="date" required>
+      </div>
+      <p class="err hidden" id="gateErr"></p>
+      <button class="btn" type="submit">Enter Cupid</button>
+    </form>
+    <p class="fine">By entering you confirm you are 18 or older and accept our <a href="#standards" style="color:var(--accent)">community standards</a>. Your date of birth stays on this device.</p>
+  </div>
+</div>
+
+<!-- ================= CONSENT ================= -->
+<div class="consent" id="consent" role="region" aria-label="Privacy choices">
+  <div class="consent-in">
+    <div>
+      <p><strong>Your privacy is the product.</strong> We use essential storage only. Optional choices below improve matching — nothing is sent anywhere in this demo.</p>
+      <div class="consent-opts" id="consentOpts" hidden>
+        <label><input type="checkbox" checked data-opt="analytics"> Anonymous usage stats</label>
+        <label><input type="checkbox" data-opt="notifications"> Meeting reminders</label>
+        <label><input type="checkbox" data-opt="personalisation"> Personalised matches</label>
+      </div>
+    </div>
+    <div class="consent-actions">
+      <button class="btn ghost small" id="consentCustom">Customise</button>
+      <button class="btn ghost small" id="consentEssential">Essential only</button>
+      <button class="btn small" id="consentAll">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Cupid<b> ♥</b></a>
+    <nav class="navlinks" aria-label="Main">
+      <a href="#members">Members</a>
+      <a href="#how">How it works</a>
+      <a href="#plans">Membership</a>
+      <a href="#standards">Standards</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn ghost small" id="openDash">My meetings<span class="count" id="dashCount">0</span></button>
+      <a class="pill" href="#plans">Join Cupid</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ================= HERO ================= -->
+  <section class="wrap hero">
+    <div>
+      <div class="eyebrow">Verified adults · Mutual consent · Total discretion</div>
+      <h1>Good company.<br><em>No guesswork.</em></h1>
+      <p class="lead">Cupid is a private club for adults who want a real evening with a verified person — not another week of swiping. Every member is identity-checked. Every introduction is agreed in writing by both sides. Nothing is public, nothing is indexed, and you choose what anyone learns about you.</p>
+
+      <form class="search" id="searchForm">
+        <div class="field">
+          <label for="qCity">City</label>
+          <input id="qCity" placeholder="Where are you staying?" autocomplete="address-level2">
+        </div>
+        <div class="field">
+          <label for="qDate">When</label>
+          <input id="qDate" type="date">
+        </div>
+        <div class="field">
+          <label for="qIntent">Looking for</label>
+          <select id="qIntent">
+            <option value="">Any occasion</option>
+            <option>Dinner</option>
+            <option>Arts &amp; culture</option>
+            <option>City exploring</option>
+            <option>Event companion</option>
+            <option>Travel company</option>
+          </select>
+        </div>
+        <button class="btn" id="searchBtn" type="submit">Find members</button>
+      </form>
+
+      <div class="trust">
+        <span>ID + photo verified</span>
+        <span>Reviews only from completed meetings</span>
+        <span>Discreet billing descriptor</span>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="img" role="img" aria-label="An elegant evening out in the city"></div>
+      <div class="hero-tag"><span id="heroLive">Members available tonight</span></div>
+      <div class="caption">
+        <strong>Arrive with someone. Leave with the evening intact.</strong>
+        <span>Introductions for dinners, openings, travel and good conversation.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEMBERS ================= -->
+  <section class="wrap section" id="members">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Vetted introductions</div>
+        <h2>Members you can actually verify</h2>
+      </div>
+      <span class="sub" id="resultCount">Loading…</span>
+    </div>
+
+    <div class="toolbar" role="group" aria-label="Filters">
+      <button class="chip active" data-filter="All">All</button>
+      <button class="chip" data-filter="Dinner">Dinner</button>
+      <button class="chip" data-filter="Arts &amp; culture">Arts &amp; culture</button>
+      <button class="chip" data-filter="City exploring">City exploring</button>
+      <button class="chip" data-filter="Event companion">Events</button>
+      <button class="chip" data-filter="Travel company">Travel</button>
+      <button class="chip" data-filter="tonight">Tonight</button>
+      <button class="chip" data-filter="idonly">ID-verified only</button>
+      <div class="spacer"></div>
+      <label for="sort" class="sub" style="font-size:11px">Sort</label>
+      <select class="sort" id="sort">
+        <option value="rank">Cupid rank</option>
+        <option value="rating">Highest rated</option>
+        <option value="price">Price: low to high</option>
+        <option value="new">Newest members</option>
+      </select>
+    </div>
+
+    <div class="cards" id="cards" aria-live="polite"></div>
+  </section>
+
+  <!-- ================= HOW ================= -->
+  <section class="wrap section" id="how">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Four steps, no small talk required</div>
+        <h2>How a Cupid introduction works</h2>
+      </div>
+      <span class="sub">Typical time from request to confirmation: under 2 hours</span>
+    </div>
+    <div class="grid-4">
+      <div class="step-card rv"><div class="n">01</div><h4>Verify once</h4><p>Photo and ID checks give you a verified badge and unlock messaging. Your legal name is never shown.</p></div>
+      <div class="step-card rv"><div class="n">02</div><h4>Choose with evidence</h4><p>Rankings, reliability rates and reviews come only from completed meetings — no anonymous noise.</p></div>
+      <div class="step-card rv"><div class="n">03</div><h4>Agree in writing</h4><p>Both sides sign a mutual discretion agreement: plans, cost, boundaries and what stays private.</p></div>
+      <div class="step-card rv"><div class="n">04</div><h4>Meet and settle</h4><p>Deposit held by Cupid, released only when you both confirm the meeting happened as agreed.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= PLANS ================= -->
+  <section class="wrap section" id="plans">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Membership</div>
+        <h2>Pay for access, not for people</h2>
+      </div>
+      <span class="sub">Cancel anytime · discreet statement descriptor</span>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <h4>Browse</h4>
+        <div class="price">Free</div>
+        <ul>
+          <li>View verified members</li>
+          <li>See rankings and reliability</li>
+          <li>3 photo reveals per week</li>
+          <li>Request 1 introduction</li>
+        </ul>
+        <button class="btn ghost" data-plan="Browse">Start free</button>
+      </div>
+      <div class="plan featured rv">
+        <h4>Member</h4>
+        <div class="price">$39 <small>/ month</small></div>
+        <ul>
+          <li>Unlimited photo reveals</li>
+          <li>5 introductions per month</li>
+          <li>Priority confirmation</li>
+          <li>Mutual discretion agreements</li>
+          <li>Deposit escrow included</li>
+        </ul>
+        <button class="btn" data-plan="Member">Become a member</button>
+      </div>
+      <div class="plan rv">
+        <h4>Premier</h4>
+        <div class="price">$99 <small>/ month</small></div>
+        <ul>
+          <li>Everything in Member</li>
+          <li>Unlimited introductions</li>
+          <li>Same-day matching</li>
+          <li>Concierge who plans the evening</li>
+          <li>Travel-city introductions</li>
+        </ul>
+        <button class="btn ghost" data-plan="Premier">Go Premier</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STANDARDS ================= -->
+  <section class="wrap" id="standards">
+    <div class="notice">
+      <div class="notice-icon" aria-hidden="true">♡</div>
+      <div>
+        <strong>Good company. Clear boundaries. Real accountability.</strong>
+        <p>
+          Cupid is a connection club for adults arranging their own private company. Members must be 18 or over and verified. Every introduction requires a signed mutual discretion agreement covering plans, cost and boundaries, and either party may end a meeting early with no penalty. Cancellation is free up to 48 hours before, 50% of the deposit is returned up to 24 hours before, and inside 24 hours the deposit is forfeited. Reviews can only be left by members with a completed, paid meeting. Harassment, pressure, sharing screenshots, or contacting someone off-platform before an introduction is confirmed results in removal. Billing appears under a neutral descriptor, profiles are excluded from search engines, and you may request full data deletion at any time.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>© 2026 Cupid · Built around consent, verification and discretion.</span>
+    <div class="footer-links">
+      <a href="#standards">Community standards</a>
+      <a href="#how">How it works</a>
+      <a href="#plans">Membership</a>
+      <a href="#top">Privacy</a>
+      <a href="mailto:support@example.com">Safety &amp; support</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= PROFILE MODAL ================= -->
+<div class="modal-backdrop" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <div class="modal wide">
+    <div class="modal-head">
+      <div class="pm-top" style="margin:0">
+        <div class="pm-photo" id="pmPhoto"></div>
+        <div>
+          <div class="eyebrow" id="pmTier"></div>
+          <h2 id="pmTitle">Member</h2>
+          <p class="sub" id="pmMeta" style="margin:2px 0 0"></p>
+          <div class="tags" id="pmTags" style="margin-top:10px"></div>
+        </div>
+      </div>
+      <button class="icon-btn" data-close="profileModal" aria-label="Close profile">✕</button>
+    </div>
+
+    <p id="pmAbout" style="margin-top:4px"></p>
+
+    <div class="eyebrow" style="margin-top:18px">Rank breakdown · <span id="pmScore"></span>/1000</div>
+    <div class="bars" id="pmBars"></div>
+
+    <div class="form-row">
+      <label>Verification &amp; availability</label>
+      <div class="tags" id="pmVerify"></div>
+    </div>
+
+    <div class="modal-foot">
+      <button class="btn ghost" data-close="profileModal">Keep browsing</button>
+      <button class="btn" id="pmRequest">Request an introduction</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= BOOKING MODAL ================= -->
+<div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bmTitle">
+  <div class="modal wide">
+    <div class="modal-head">
+      <div>
+        <div class="eyebrow">Introduction request</div>
+        <h2 id="bmTitle">Plan a meeting</h2>
+        <p class="sub" id="bmSub" style="margin:2px 0 0"></p>
+      </div>
+      <button class="icon-btn" data-close="bookingModal" aria-label="Close booking">✕</button>
+    </div>
+
+    <div class="steps" id="bmSteps"><span class="on"></span><span></span><span></span><span></span></div>
+
+    <!-- step 1 -->
+    <div class="step" data-step="1">
+      <div class="opt-group" id="durationOpts"></div>
+      <div class="form-row two">
+        <div>
+          <label for="bDate">Date</label>
+          <input id="bDate" type="date">
+        </div>
+        <div>
+          <label for="bTime">Start time</label>
+          <input id="bTime" type="time" value="19:30">
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="bVenue">Neighbourhood or venue (optional)</label>
+        <input id="bVenue" placeholder="e.g. Tribeca, a wine bar, my hotel lobby">
+      </div>
+      <div class="form-row">
+        <label for="bNote">What you have in mind</label>
+        <textarea id="bNote" rows="2" placeholder="Dinner and a late set afterwards — nothing planned past midnight."></textarea>
+    </div>
+      <p class="err-line hidden" id="step1Err"></p>
+    </div>
+
+    <!-- step 2 -->
+    <div class="step hidden" data-step="2">
+      <label class="check"><input type="checkbox" id="ag1"><span><strong style="color:var(--text)">Terms of service.</strong> I accept Cupid's terms, cancellation tiers and refund policy.</span></label>
+      <label class="check"><input type="checkbox" id="ag2"><span><strong style="color:var(--text)">Mutual discretion agreement.</strong> Both of us keep the meeting, its content and each other's identity private. No screenshots, no disclosure.</span></label>
+      <label class="check"><input type="checkbox" id="ag3"><span><strong style="color:var(--text)">Adult confirmation.</strong> I am 18 or older and both parties may end the meeting at any time without penalty.</span></label>
+      <label class="check"><input type="checkbox" id="ag4"><span><strong style="color:var(--text)">Boundaries in writing.</strong> Plans, timing and cost are as stated here; nothing further is assumed by either side.</span></label>
+      <p class="err-line hidden" id="step2Err"></p>
+      <p class="sub" style="font-size:11.5px;margin:12px 0 0">Accepted agreements are timestamped, versioned and stored with this request.</p>
+    </div>
+
+    <!-- step 3 -->
+    <div class="step hidden" data-step="3">
+      <div class="summary" id="paySummary"></div>
+      <div class="form-row">
+        <label for="cardName">Name on card</label>
+        <input id="cardName" autocomplete="cc-name" placeholder="A. Client">
+      </div>
+      <div class="form-row">
+        <label for="cardNum">Card number</label>
+        <input id="cardNum" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" maxlength="19">
+      </div>
+      <div class="form-row two">
+        <div><label for="cardExp">Expiry</label><input id="cardExp" placeholder="MM/YY" maxlength="5" inputmode="numeric"></div>
+        <div><label for="cardCvc">CVC</label><input id="cardCvc" placeholder="123" maxlength="4" inputmode="numeric"></div>
+      </div>
+      <p class="err-line hidden" id="step3Err"></p>
+      <p class="sub" style="font-size:11.5px">Demo mode: no card is charged. Stripe test key 4242 4242 4242 4242. Appears on statements as <strong>CPD SVCS</strong>.</p>
+    </div>
+
+    <!-- step 4 -->
+    <div class="step hidden" data-step="4" style="text-align:center;padding:8px 0 4px">
+      <div style="font:34px var(--serif);color:var(--accent)">♥</div>
+      <h3 style="font:500 23px var(--serif);margin:8px 0 6px">Request sent</h3>
+      <p id="successText" style="max-width:400px;margin:0 auto 6px"></p>
+      <p class="sub" style="font-size:11.5px">Deposit is held by Cupid and released only after you both confirm the meeting.</p>
+    </div>
+
+    <div class="modal-foot" id="bmFoot">
+      <button class="btn ghost" id="bmBack">Back</button>
+      <button class="btn" id="bmNext">Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DASHBOARD ================= -->
+<aside class="drawer" id="drawer" aria-label="My meetings" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>My meetings</h3>
+    <button class="icon-btn" id="closeDash" aria-label="Close meetings">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------- storage ---------------- */
+  const KEY = { age: 'cupid.age.v1', consent: 'cupid.consent.v1', bookings: 'cupid.bookings.v1', reveal: 'cupid.reveals.v1', member: 'cupid.member.v1' };
+  const read = (k, fb) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; } catch (e) { return fb; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  const has = k => { try { return localStorage.getItem(k) !== null; } catch (e) { return false; } };
+
+  const $ = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const money = n => '$' + Number(n).toLocaleString('en-US');
+
+  /* ---------------- data ---------------- */
+  const members = [
+    { id: 1, name: 'Maya', age: 29, city: 'New York', rate: 180, rating: 4.98, reliability: .97, meetings: 48, repeat: .62, penalty: .01,
+      verif: 'ID + photo verified', tags: ['Dinner', 'Arts & culture', 'Travel company'], tonight: true, joined: '2023-04-11',
+      about: 'Museum curator by trade, so the gallery is always the good one. Unhurried, curious, and comfortable with long dinners where the conversation does the work.',
+      img: 'photo-1534528741775-53994a69daeb', nights: ['Tonight', 'Thu', 'Fri', 'Sat'] },
+    { id: 2, name: 'Oliver', age: 32, city: 'Chicago', rate: 160, rating: 4.96, reliability: .95, meetings: 39, repeat: .55, penalty: .02,
+      verif: 'ID + photo verified', tags: ['Dinner', 'Event companion', 'Arts & culture'], tonight: false, joined: '2023-07-02',
+      about: 'Architect, jazz-room regular, and a reliable plus-one when the room is full of strangers you would rather not impress.',
+      img: 'photo-1500648767791-00dcc994a43e', nights: ['Thu', 'Fri', 'Sat'] },
+    { id: 3, name: 'Sofia', age: 27, city: 'Los Angeles', rate: 210, rating: 5.00, reliability: .99, meetings: 51, repeat: .71, penalty: 0,
+      verif: 'ID + photo verified', tags: ['Event companion', 'City exploring', 'Travel company'], tonight: true, joined: '2022-11-18',
+      about: 'Opening nights, long coastal drives, and the kind of easy company that makes a room of strangers feel like a good evening.',
+      img: 'photo-1524504388940-b1c1722653e1', nights: ['Tonight', 'Fri', 'Sat', 'Sun'] },
+    { id: 4, name: 'Ethan', age: 31, city: 'New York', rate: 150, rating: 4.89, reliability: .93, meetings: 27, repeat: .41, penalty: .03,
+      verif: 'Photo verified', tags: ['Event companion', 'Arts & culture'], tonight: false, joined: '2024-01-09',
+      about: 'Film and live music. Good at keeping things light, better at keeping them private.',
+      img: 'photo-1506794778202-cad84cf45f1d', nights: ['Mon', 'Tue', 'Wed'] },
+    { id: 5, name: 'Amara', age: 34, city: 'Chicago', rate: 190, rating: 4.97, reliability: .98, meetings: 44, repeat: .66, penalty: .01,
+      verif: 'ID + photo verified', tags: ['Dinner', 'City exploring'], tonight: false, joined: '2022-08-21',
+      about: 'A steady, thoughtful presence for dinners that need to go well and evenings that need to stay quiet.',
+      img: 'photo-1531123897727-8f129e1688ce', nights: ['Wed', 'Thu', 'Sat'] },
+    { id: 6, name: 'Leo', age: 28, city: 'Los Angeles', rate: 140, rating: 4.92, reliability: .94, meetings: 22, repeat: .38, penalty: .02,
+      verif: 'Photo verified', tags: ['City exploring', 'Event companion'], tonight: true, joined: '2024-03-30',
+      about: 'Markets, bookstores, hikes and the occasional red carpet. Locally fluent, terminally discreet.',
+      img: 'photo-1507003211169-0a1dd7228f2d', nights: ['Tonight', 'Tue', 'Wed'] },
+    { id: 7, name: 'Priya', age: 30, city: 'Miami', rate: 200, rating: 4.99, reliability: .98, meetings: 33, repeat: .58, penalty: 0,
+      verif: 'ID + photo verified', tags: ['Dinner', 'Travel company', 'City exploring'], tonight: true, joined: '2023-02-14',
+      about: 'Warm, quick-witted and rarely rattled. Excellent company for a first night in an unfamiliar city.',
+      img: 'photo-1524504388940-b1c1722653e1', nights: ['Tonight', 'Fri', 'Sun'] },
+    { id: 8, name: 'Jonas', age: 35, city: 'Miami', rate: 175, rating: 4.90, reliability: .96, meetings: 29, repeat: .47, penalty: .02,
+      verif: 'ID + photo verified', tags: ['Arts & culture', 'City exploring'], tonight: false, joined: '2023-09-05',
+      about: 'Quietly funny, unhurried, and genuinely good at reading a room.',
+      img: 'photo-1506794778202-cad84cf45f1d', nights: ['Thu', 'Sat'] },
+    { id: 9, name: 'Nadia', age: 26, city: 'New York', rate: 155, rating: 4.85, reliability: .90, meetings: 6, repeat: .20, penalty: .02,
+      verif: 'ID + photo verified', tags: ['Dinner', 'City exploring'], tonight: true, joined: '2026-09-28',
+      about: 'New to Cupid this season. Direct, funny, and refreshingly clear about what she is and is not looking for.',
+      img: 'photo-1524504388940-b1c1722653e1', nights: ['Tonight', 'Fri'] }
+  ];
+
+  /* ---------------- ranking ---------------- */
+  const TIERS = [
+    { min: 900, name: "Cupid's Choice", color: '#e98a76' },
+    { min: 830, name: 'Platinum Heart', color: '#c9d6e2' },
+    { min: 700, name: 'Gold Heart', color: '#e3c07b' },
+    { min: 550, name: 'Silver Heart', color: '#b9b3ae' },
+    { min: 0,   name: 'Bronze Heart', color: '#c0916b' }
+  ];
+  function scoreOf(m) {
+    const comp = {
+      reviews: 400 * (m.rating / 5),
+      reliability: 180 * m.reliability,
+      volume: 180 * Math.min(m.meetings / 60, 1),
+      repeat: 140 * m.repeat,
+      conduct: 100 * (1 - m.penalty)
+    };
+    const total = Math.round(Math.min(1000, Math.max(0, comp.reviews + comp.reliability + comp.volume + comp.repeat + comp.conduct)));
+    return { total, comp };
+  }
+  const tierOf = s => TIERS.find(t => s >= t.min);
+
+  members.forEach(m => { const s = scoreOf(m); m.score = s.total; m.bars = s.comp; m.tier = tierOf(s.total); });
+
+  /* ---------------- state ---------------- */
+  let revealed = new Set(read(KEY.reveal, []));
+  let bookings = read(KEY.bookings, []);
+  state = { filter: 'All', city: '', intent: '', tonight: false, idOnly: false, sort: 'rank' };
+
+  /* ---------------- render cards ---------------- */
+  const cards = $('#cards');
+  const STATUS_FLOW = ['Awaiting confirmation', 'Confirmed', 'Meeting completed', 'Released'];
+
+  function visible() {
+    return members.filter(m => {
+      if (state.city && !m.city.toLowerCase().includes(state.city.toLowerCase())) return false;
+      if (state.intent && !m.tags.includes(state.intent)) return false;
+      if (state.tonight && !m.tonight) return false;
+      if (state.idOnly && !m.verif.startsWith('ID')) return false;
+      if (state.filter !== 'All' && state.filter !== 'tonight' && state.filter !== 'idonly' && !m.tags.includes(state.filter)) return false;
+      return true;
+    }).sort((a, b) => {
+      if (state.sort === 'rating') return b.rating - a.rating;
+      if (state.sort === 'price') return a.rate - b.rate;
+      if (state.sort === 'new') return new Date(b.joined) - new Date(a.joined);
+      return b.score - a.score;
+    });
+  }
+
+  function cardHTML(m) {
+    const locked = !revealed.has(m.id);
+    const rising = m.meetings < 10;
+    return `
+      <article class="card rv">
+        <div class="photo ${locked ? 'locked' : ''}">
+          <div class="img" style="background-image:url('https://images.unsplash.com/${m.img}?auto=format&fit=crop&w=900&q=80')"></div>
+          <div class="scrim"></div>
+          <span class="badge b-verif">${m.verif}</span>
+          <span class="badge b-price">from ${money(m.rate)}/hr</span>
+          <span class="badge b-tier"><span class="tier-dot" style="background:${m.tier.color}"></span>${m.tier.name}</span>
+          <button class="reveal-btn" data-reveal="${m.id}">${locked ? 'Reveal photo' : 'Photo shown'}</button>
+        </div>
+        <div class="card-body">
+          <div class="card-title">
+            <h3>${m.name}, ${m.age}</h3>
+            <span class="rating">★ ${m.rating.toFixed(2)} <i>(${m.meetings})</i></span>
+          </div>
+          <p>${m.city} · ${m.about.slice(0, 96)}…</p>
+          <div class="tags">
+            ${rising ? '<span class="tag hot">Rising star</span>' : ''}
+            ${m.tonight ? '<span class="tag hot">Tonight</span>' : ''}
+            ${m.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+          <div class="card-foot">
+            <small>Rank ${m.score}/1000 · ${Math.round(m.reliability * 100)}% reliable</small>
+            <button class="text-btn" data-profile="${m.id}">View &amp; request →</button>
+          </div>
+        </div>
+      </article>`;
+  }
+
+  function render() {
+    const list = visible();
+    $('#resultCount').textContent = list.length + (list.length === 1 ? ' verified member' : ' verified members');
+    $('#heroLive').textContent = members.filter(m => m.tonight).length + ' members free tonight';
+    cards.innerHTML = list.length ? list.map(cardHTML).join('')
+      : '<div class="empty">No members match those filters. Try another city, or clear the filters.</div>';
+    observeReveals();
+  }
+
+  /* ---------------- reveal on scroll ---------------- */
+  let io = null;
+  function observeReveals() {
+    if (!('IntersectionObserver' in window)) { $$('.rv').forEach(e => e.classList.add('in')); return; }
+    if (io) io.disconnect();
+    io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: .06 });
+    $$('.rv:not(.in)').forEach(e => io.observe(e));
+  }
+
+  /* ---------------- toast ---------------- */
+  let toastTimer;
+  function toast(msg) {
+    const t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3400);
+  }
+
+  /* ---------------- age gate ---------------- */
+  function ageFrom(dobStr) {
+    const d = new Date(dobStr);
+    if (isNaN(d)) return null;
+    const now = new Date();
+    let a = now.getFullYear() - d.getFullYear();
+    const m = now.getMonth() - d.getMonth();
+    if (m < 0 || (m === 0 && now.getDate() < d.getDate())) a--;
+    return a;
+  }
+  const gate = $('#ageGate');
+  if (!has(KEY.age)) gate.hidden = false;
+
+  $('#gateForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const dob = $('#dob').value;
+    const err = $('#gateErr');
+    if (!dob) { err.textContent = 'Please enter your date of birth.'; err.classList.remove('hidden'); return; }
+    const age = ageFrom(dob);
+    if (age === null || age < 18) {
+      err.textContent = 'Cupid is strictly for adults. You must be 18 or older to enter.';
+      err.classList.remove('hidden');
+      return;
+    }
+    write(KEY.age, { ok: true, dob, at: Date.now() });
+    gate.hidden = true;
+    showConsent();
+    toast('Welcome to Cupid. Verified members are ready.');
+  });
+
+  /* ---------------- consent ---------------- */
+  function showConsent() {
+    if (!has(KEY.consent)) setTimeout(() => $('#consent').classList.add('show'), 420);
+  }
+  function saveConsent(obj) {
+    write(KEY.consent, Object.assign({ version: '1.0', at: Date.now() }, obj));
+    $('#consent').classList.remove('show');
+    toast(obj.mode === 'essential' ? 'Saved: essential storage only.' : 'Privacy choices saved.');
+  }
+  $('#consentCustom').addEventListener('click', () => {
+    const o = $('#consentOpts');
+    o.hidden = !o.hidden;
+  });
+  $('#consentEssential').addEventListener('click', () => saveConsent({ mode: 'essential', analytics: false, notifications: false, personalisation: false }));
+  $('#consentAll').addEventListener('click', () => saveConsent({ mode: 'all', analytics: true, notifications: true, personalisation: true }));
+  $('#consentOpts').addEventListener('change', () => {
+    const opts = {};
+    $$('#consentOpts input').forEach(i => opts[i.dataset.opt] = i.checked);
+    saveConsent(Object.assign({ mode: 'custom' }, opts));
+  });
+  if (has(KEY.consent)) $('#consent').classList.remove('show'); else if (has(KEY.age)) showConsent();
+
+  /* ---------------- filters & search ---------------- */
+  $$('.chip[data-filter]').forEach(chip => chip.addEventListener('click', () => {
+    const f = chip.dataset.filter;
+    if (f === 'tonight') { state.tonight = !state.tonight; chip.classList.toggle('active', state.tonight); }
+    else if (f === 'idonly') { state.idOnly = !state.idOnly; chip.classList.toggle('active', state.idOnly); }
+    else {
+      $$('.chip[data-filter]').forEach(c => { if (!['tonight', 'idonly'].includes(c.dataset.filter)) c.classList.remove('active'); });
+      chip.classList.add('active');
+      state.filter = f;
+    }
+    render();
+  }));
+
+  $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
+
+  $('#searchForm').addEventListener('submit', e => {
+    e.preventDefault();
+    state.city = $('#qCity').value.trim();
+    state.intent = $('#qIntent').value;
+    render();
+    document.getElementById('members').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const n = visible().length;
+    toast(n ? n + ' member' + (n === 1 ? '' : 's') + ' match your evening.' : 'No matches yet — try another city.');
+  });
+
+  // delegate card clicks
+  cards.addEventListener('click', e => {
+    const rv = e.target.closest('[data-reveal]');
+    if (rv) {
+      const id = Number(rv.dataset.reveal);
+      if (revealed.has(id)) { revealed.delete(id); toast('Photo hidden again.'); }
+      else { revealed.add(id); toast('Photo revealed — visible only on this device.'); }
+      write(KEY.reveal, Array.from(revealed));
+      render();
+      return;
+    }
+    const pf = e.target.closest('[data-profile]');
+    if (pf) openProfile(Number(pf.dataset.profile));
+  });
+
+  /* ---------------- modal helpers ---------------- */
+  function openModal(id) { $('#' + id).classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal(id) { $('#' + id).classList.remove('open'); if (!$$('.modal-backdrop.open').length && !$('#drawer').classList.contains('open')) document.body.style.overflow = ''; }
+  $$('[data-close]').forEach(b => b.addEventListener('click', () => closeModal(b.dataset.close)));
+  $$('.modal-backdrop').forEach(bd => bd.addEventListener('click', e => { if (e.target === bd) closeModal(bd.id); }));
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    const open = $$('.modal-backdrop.open').pop();
+    if (open) closeModal(open.id);
+    else if ($('#drawer').classList.contains('open')) toggleDash(false);
+  });
+
+  /* ---------------- profile modal ---------------- */
+  let profileMember = null;
+  function openProfile(id) {
+    const m = members.find(x => x.id === id);
+    if (!m) return;
+    profileMember = m;
+    $('#pmPhoto').style.backgroundImage = `url('https://images.unsplash.com/${m.img}?auto=format&fit=crop&w=600&q=80')`;
+    $('#pmTier').textContent = m.tier.name + ' · Rank ' + m.score + '/1000';
+    $('#pmTitle').textContent = m.name + ', ' + m.age;
+    $('#pmMeta').textContent = `${m.city} · from ${money(m.rate)}/hr · ${m.meetings} completed meetings`;
+    $('#pmTags').innerHTML = (m.meetings < 10 ? '<span class="tag hot">Rising star</span>' : '') + m.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    $('#pmAbout').textContent = m.about;
+    $('#pmScore').textContent = m.score;
+
+    const bars = [
+      ['Reviews', m.bars.reviews, 400],
+      ['Reliability', m.bars.reliability, 180],
+      ['Experience', m.bars.volume, 180],
+      ['Repeat clients', m.bars.repeat, 140],
+      ['Conduct', m.bars.conduct, 100]
+    ];
+    $('#pmBars').innerHTML = bars.map(([label, val, max]) => `
+      <div class="bar-row">
+        <span>${label}</span>
+        <span class="bar"><i style="width:${Math.round(val / max * 100)}%"></i></span>
+        <b>${Math.round(val)}/${max}</b>
+      </div>`).join('');
+
+    $('#pmVerify').innerHTML = [
+      `<span class="tag">✓ ${m.verif}</span>`,
+      `<span class="tag">✓ ${Math.round(m.reliability * 100)}% on-time</span>`,
+      `<span class="tag">✓ ${Math.round(m.repeat * 100)}% return rate</span>`,
+      `<span class="tag">Available: ${m.nights.join(', ')}</span>`
+    ].join('');
+
+    openModal('profileModal');
+  }
+
+  $('#pmRequest').addEventListener('click', () => {
+    if (!profileMember) return;
+    closeModal('profileModal');
+    startBooking(profileMember);
+  });
+
+  /* ---------------- booking flow ---------------- */
+  const DURATIONS = [
+    { label: '1 hour — drinks or a short evening', hours: 1, mult: 1 },
+    { label: '2 hours — dinner', hours: 2, mult: 1.9 },
+    { label: '3 hours — dinner and afterwards', hours: 3, mult: 2.75 },
+    { label: 'Evening — 5 hours', hours: 5, mult: 4.4 }
+  ];
+  let bk = null;
+
+  function startBooking(m) {
+    bk = { member: m, step: 1, duration: 0, total: 0, deposit: 0, date: '', time: '19:30', venue: '', note: '' };
+    $('#bmSub').textContent = `${m.name}, ${m.age} · ${m.city} · ${m.tier.name}`;
+    $('#durationOpts').innerHTML = DURATIONS.map((d, i) => `
+      <div class="opt ${i === 1 ? 'sel' : ''}" data-dur="${i}" role="button" tabindex="0">
+        <span>${d.label}</span>
+        <span class="o-price">${money(Math.round(m.rate * d.mult))}</span>
+      </div>`).join('');
+    bk.duration = 1;
+    bk.total = Math.round(m.rate * DURATIONS[1].mult);
+    bk.deposit = Math.round(bk.total * 0.25);
+
+    const today = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const min = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
+    $('#bDate').min = min;
+    $('#bDate').value = min;
+    $('#bTime').value = '19:30';
+    $('#bVenue').value = '';
+    $('#bNote').value = '';
+    ['ag1', 'ag2', 'ag3', 'ag4'].forEach(id => $('#' + id).checked = false);
+    ['step1Err', 'step2Err', 'step3Err'].forEach(id => $('#' + id).classList.add('hidden'));
+
+    gotoStep(1);
+    openModal('bookingModal');
+  }
+
+  $('#durationOpts').addEventListener('click', e => {
+    const opt = e.target.closest('.opt');
+    if (!opt) return;
+    $$('#durationOpts .opt').forEach(o => o.classList.remove('sel'));
+    opt.classList.add('sel');
+    bk.duration = Number(opt.dataset.dur);
+    bk.total = Math.round(bk.member.rate * DURATIONS[bk.duration].mult);
+    bk.deposit = Math.round(bk.total * 0.25);
+  });
+  $('#durationOpts').addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.target.click(); }
+  });
+
+  function gotoStep(n) {
+    bk.step = n;
+    $$('#bmSteps span').forEach((s, i) => s.classList.toggle('on', i < n));
+    $$('.step').forEach(s => s.classList.toggle('hidden', Number(s.dataset.step) !== n));
+    $('#bmBack').textContent = n === 1 ? 'Cancel' : 'Back';
+    $('#bmNext').textContent = n === 1 ? 'Continue' : n === 2 ? 'Accept & continue' : n === 3 ? 'Pay deposit' : 'Done';
+    $('#bmFoot').style.display = n === 4 ? 'flex' : 'flex';
+    if (n === 4) { $('#bmBack').classList.add('hidden'); $('#bmNext').classList.remove('hidden'); }
+    else $('#bmBack').classList.remove('hidden');
+
+    if (n === 3) {
+      $('#paySummary').innerHTML = `
+        <div><span>${bk.member.name} · ${DURATIONS[bk.duration].label.split(' — ')[0]}</span><span>${money(bk.total)}</span></div>
+        <div><span>When</span><span>${bk.date || '—'} ${bk.time}</span></div>
+        <div><span>Where</span><span>${bk.venue || bk.member.city + ' (to agree)'}</span></div>
+        <div class="small">Deposit now (25%) — balance settled directly at the meeting</div>
+        <div class="total"><span>Due today</span><span>${money(bk.deposit)}</span></div>`;
+    }
+  }
+
+  $('#bmBack').addEventListener('click', () => {
+    if (bk.step === 1) { closeModal('bookingModal'); return; }
+    gotoStep(bk.step - 1);
+  });
+
+  $('#bmNext').addEventListener('click', () => {
+    if (bk.step === 1) {
+      const date = $('#bDate').value, time = $('#bTime').value;
+      const err = $('#step1Err');
+      if (!date || !time) { err.textContent = 'Choose a date and a start time.'; err.classList.remove('hidden'); return; }
+      if (new Date(date + 'T' + time) < new Date()) { err.textContent = 'That time has already passed — pick a future slot.'; err.classList.remove('hidden'); return; }
+      err.classList.add('hidden');
+      bk.date = date; bk.time = time;
+      bk.venue = $('#bVenue').value.trim();
+      bk.note = $('#bNote').value.trim();
+      gotoStep(2);
+      return;
+    }
+    if (bk.step === 2) {
+      const ok = ['ag1', 'ag2', 'ag3', 'ag4'].every(id => $('#' + id).checked);
+      const err = $('#step2Err');
+      if (!ok) { err.textContent = 'All four agreements must be accepted before we can hold a deposit.'; err.classList.remove('hidden'); return; }
+      err.classList.add('hidden');
+      gotoStep(3);
+      return;
+    }
+    if (bk.step === 3) {
+      const num = $('#cardNum').value.replace(/\s/g, '');
+      const exp = $('#cardExp').value;
+      const cvc = $('#cardCvc').value;
+      const err = $('#step3Err');
+      if (num.length < 15 || !/^\d{2}\/\d{2}$/.test(exp) || cvc.length < 3) {
+        err.textContent = 'Check the card details — number, MM/YY expiry and CVC.';
+        err.classList.remove('hidden');
+        return;
+      }
+      err.classList.add('hidden');
+      finaliseBooking();
+      gotoStep(4);
+      return;
+    }
+    if (bk.step === 4) closeModal('bookingModal');
+  });
+
+  // card input formatting
+  $('#cardNum').addEventListener('input', e => {
+    const v = e.target.value.replace(/\D/g, '').slice(0, 16);
+    e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
+  });
+  $('#cardExp').addEventListener('input', e => {
+    let v = e.target.value.replace(/\D/g, '').slice(0, 4);
+    if (v.length > 2) v = v.slice(0, 2) + '/' + v.slice(2);
+    e.target.value = v;
+  });
+  $('#cardCvc').addEventListener('input', e => {
+    e.target.value = e.target.value.replace(/\D/g, '').slice(0, 4);
+  });
+
+  function finaliseBooking() {
+    const b = {
+      id: 'CPD-' + Math.random().toString(36).slice(2, 7).toUpperCase(),
+      memberId: bk.member.id,
+      name: bk.member.name,
+      city: bk.member.city,
+      plan: DURATIONS[bk.duration].label.split(' — ')[0],
+      date: bk.date,
+      time: bk.time,
+      venue: bk.venue || bk.member.city + ' — to agree',
+      note: bk.note,
+      total: bk.total,
+      deposit: bk.deposit,
+      status: 'Awaiting confirmation',
+      createdAt: Date.now(),
+      agreements: { version: '1.0', at: Date.now(), terms: true, discretion: true, adult: true, boundaries: true },
+      rating: 0
+    };
+    bookings.unshift(b);
+    write(KEY.bookings, bookings);
+    $('#successText').innerHTML = `<strong style="color:var(--text)">${b.name}</strong> has been notified of your request for <strong style="color:var(--text)">${b.date} at ${b.time}</strong>. Reference <strong style="color:var(--text)">${b.id}</strong>. Deposit of ${money(b.deposit)} held.`;
+    renderDash();
+    toast('Deposit held. Awaiting ' + b.name + "'s confirmation.");
+  }
+
+  /* ---------------- dashboard ---------------- */
+  const drawer = $('#drawer');
+  function toggleDash(force) {
+    const open = force === undefined ? !drawer.classList.contains('open') : force;
+    drawer.classList.toggle('open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) renderDash();
+  }
+  $('#openDash').addEventListener('click', () => toggleDash());
+  $('#closeDash').addEventListener('click', () => toggleDash(false));
+
+  function renderDash() {
+    $('#dashCount').textContent = bookings.length;
+    const body = $('#drawerBody');
+    if (!bookings.length) {
+      body.innerHTML = '<div class="empty" style="padding:34px">No meetings yet. Browse members and request an introduction — everything you book shows up here with its status.</div>';
+      return;
+    }
+    body.innerHTML = bookings.map(b => {
+      const idx = STATUS_FLOW.indexOf(b.status);
+      const done = idx < 0 ? 0 : idx;
+      const cancelled = b.status === 'Cancelled';
+      const fill = cancelled ? 0 : done + 1;
+      return `
+      <div class="booking">
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+          <div>
+            <h4>${b.name}</h4>
+            <div class="meta">${b.date} · ${b.time} · ${b.plan} · ${b.city}</div>
+          </div>
+          <span class="status">${b.status}</span>
+        </div>
+        <div class="timeline">
+          ${STATUS_FLOW.map((s, i) => `<span class="${i < fill ? 'done' : ''}"></span>`).join('')}
+        </div>
+        <div class="timeline-labels"><span>Request</span><span>Confirmed</span><span>Met</span><span>Released</span></div>
+        <div class="meta" style="margin-top:10px">Ref ${b.id} · total ${money(b.total)} · deposit ${money(b.deposit)} held</div>
+        ${b.venue ? `<div class="meta">Where: ${b.venue}</div>` : ''}
+        <div class="actions">
+          ${b.status === 'Awaiting confirmation' ? `<button class="btn small" data-adv="${b.id}">Demo: member accepts</button><button class="btn ghost small" data-cancel="${b.id}">Cancel</button>` : ''}
+          ${b.status === 'Confirmed' ? `<button class="btn small" data-adv="${b.id}">Demo: mark meeting complete</button><button class="btn ghost small" data-cancel="${b.id}">Cancel</button>` : ''}
+          ${b.status === 'Meeting completed' ? `<button class="btn small" data-adv="${b.id}">Confirm &amp; release deposit</button>` : ''}
+          ${b.status === 'Released' ? `<div style="width:100%">
+              <div class="meta">${b.rating ? 'Your rating: ' + '★'.repeat(b.rating) : 'Rate the meeting — feeds the ranking'}</div>
+              <div class="stars">${[1,2,3,4,5].map(n => `<button data-rate="${b.id}" data-n="${n}" class="${b.rating >= n ? 'on' : ''}" aria-label="${n} stars">★</button>`).join('')}</div>
+            </div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  $('#drawerBody').addEventListener('click', e => {
+    const adv = e.target.closest('[data-adv]');
+    const can = e.target.closest('[data-cancel]');
+    const rate = e.target.closest('[data-rate]');
+    if (adv) {
+      const b = bookings.find(x => x.id === adv.dataset.adv);
+      const i = STATUS_FLOW.indexOf(b.status);
+      if (i >= 0 && i < STATUS_FLOW.length - 1) {
+        b.status = STATUS_FLOW[i + 1];
+        write(KEY.bookings, bookings);
+        renderDash();
+        toast(b.status === 'Released'
+          ? 'Deposit released. Both parties confirmed the meeting.'
+          : 'Status updated: ' + b.status + '.');
+      }
+      return;
+    }
+    if (can) {
+      const b = bookings.find(x => x.id === can.dataset.cancel);
+      b.status = 'Cancelled';
+      write(KEY.bookings, bookings);
+      renderDash();
+      toast('Cancelled. Deposit refunded in full as this was outside 48 hours.');
+      return;
+    }
+    if (rate) {
+      const b = bookings.find(x => x.id === rate.dataset.rate);
+      b.rating = Number(rate.dataset.n);
+      write(KEY.bookings, bookings);
+      renderDash();
+      toast('Rating saved — it now counts toward ' + b.name + "'s rank.");
+    }
+  });
+
+  /* ---------------- plans ---------------- */
+  $$('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
+    const plan = btn.dataset.plan;
+    write(KEY.member, { plan, at: Date.now() });
+    toast(plan === 'Browse'
+      ? 'Browsing as a guest. Request an introduction to continue.'
+      : plan + ' membership activated (demo) — discreet descriptor CPD SVCS.');
+  }));
+
+  /* ---------------- init ---------------- */
+  render();
+  observeReveals();
+  renderDash();
+  write(KEY.reveal, Array.from(revealed));
+})();
+</script>
 </body>
 </html>
